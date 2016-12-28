@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto')
+@import url('https://fonts.googleapis.com/css?family=Ultra')
+
+$gray: rgb(55, 65, 64)
+$gold: rgb(217, 203, 158)
+$red:  rgb(220, 53, 34)
+
+
+body
+  font-family: 'Roboto', sans-serif
+  background: url("../img/squairy_light.png")
+  min-width: 256px
+
+h1, h2, h3, h4, h5, h6, p, a, h1 small, .navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a
+  color: $gold
+
+h1
+  margin: 1em 0 0.5em 0
+  color: #343434
+  font-weight: normal
+  font-family: 'Ultra', sans-serif
+  font-size: 36px
+  line-height: 42px
+  text-transform: uppercase
+  text-shadow: 0 2px $gold, 0 3px #777
+
+h1 small
+  font-size: 55%
+  color: $gold
+  text-shadow: 0 2px $gray, 0 3px #777
+
+.section
+  position: relative
+  padding: 35px 0
+
+
+nav.navbar
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  background: transparent
+  z-index: 100
+  text-transform: uppercase
+  text-shadow: 0 1px
+  border: none
+  min-width: 250px
+
+.navbar-default
+  .navbar-toggle
+      border-color: $gold
+.navbar-brand
+  color: $gold
+  font-size: 55%
+  text-shadow: 0 2px $gray, 0 3px #777
+  font-family: 'Ultra', sans-serif
+  font-size: 17px
+  line-height: 18px
+  text-transform: uppercase
+
+.navbar-nav
+  >li
+    >a
+      @extend .navbar-brand
+      line-height: 10px
+
+.navbar-default
+  .navbar-nav>li>a:hover, .navbar-header>p:hover
+    color: $gold
+
+.hvr-underline-from-left:before
+  background: $gold
+
+
+
+/* HERO */
+#hero
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.3) 100%), url(../img/73f4pkoukm0-tobias-keller.jpg)
+  background-repeat: no-repeat
+  background-position: center center fixed
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+  height: 100vh
+  min-height: 200px
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+  top: 0
+  left: 0
+  >.slogan
+    max-width: 266px
+    >h1
+      margin-top: 0
+      padding: 9px
+      text-shadow: 1px 1px 1px $gold
+
+
+
+/* ABOUT */
+#about
+  min-height: 50vh
+  padding-top: 5%
+  padding-bottom: 4%
+  z-index: 40
+
+#about h2, #work h2
+  margin: 1em 0 0.5em 0
+  color: #343434
+  font-weight: normal
+  font-family: 'Ultra', sans-serif
+  font-size: 30px
+  line-height: 35px
+  text-transform: uppercase
+  text-shadow: 0 2px $gold, 0 3px #777
+
+#skills h2, #contact h2
+  margin: 1em 0 0.5em 0
+  color: $gold
+  font-weight: normal
+  font-family: 'Ultra', sans-serif
+  font-size: 30px
+  line-height: 35px
+  text-transform: uppercase
+  text-shadow: 0 2px $gray, 0 3px #777
+
+#about
+  h2, p
+    color: $gray
+
+#aboutContent
+  margin-bottom: 40px
+
+.cicle, .grill
+  width: 170px
+  height: 170px
+  border-radius: 50%
+  margin: 15px auto
+
+.grill
+  background: url("http://i1060.photobucket.com/albums/t450/seriu/css-patterns/d5ec85f2_zpsztgdihsm.png") repeat
+  overflow: hidden
+
+
+
+/* SKILLS */
+#skills
+  background: $gray
+  min-height: 50vh
+  padding-top: 5%
+  padding-bottom: 4%
+  z-index: 40
+
+.mySkills
+  display: flex
+  flex-wrap: wrap
+  flex-direction: row
+
+[class*="svg-"]
+  width: 100%
+  padding: 0 17%
+  text-align: center
+  transform: scale(0.8)
+
+
+
+/* WORK */
+#work
+  padding-top: 5%
+  padding-bottom: 4%
+  h2
+    margin-bottom: 50px
+  h2, h3, h4, p
+    color: $gray
+  .img-work
+    margin: 0 auto 20px auto
+    img
+      width: 350px
+  .container
+    >div[class*="work-"]
+      margin: 3% auto 1% auto
+  .work-about
+    h3
+      margin-top: 0
+  .about-description
+    .row
+      margin-top: 20px
+  h3
+    margin-top: 0
+  hr
+    border-color: $red
+  .used
+    margin-top: 15px
+
+.work
+  h3, h4, p
+    color: $gray
+
+
+
+.col-xs-6
+  >a.btn.btn-default.btn-lg
+    padding: 6px 6px
+    font-size: 14px
+    width: 80px
+    
+a.btn.btn-default.btn-lg:hover
+  background-color: $red
+  color: $gold
+
+
+/* CONTACT */
+#contact
+  background: rgb(55, 65, 64)
+  padding-top: 30px
+  padding-bottom: 40px
+  h2
+    margin-bottom: 35px
+  .contact .btn
+    margin: 20px 0
+  p
+    >a, >a:hover
+      color: rgb(220, 53, 34)
+  .contact-icons
+    a:hover
+      .fa-linkedin
+        color: #0077B5
+      .fa-github
+        color: #000
+
+footer
+  background: rgb(30, 30, 32)
+  padding: 20px 0
+  font-size: 16px
+  p
+    margin: 0
+    padding: 0 10px
+
+
+
+
+/* MEDIA */
+/* For iPhone 5S: */
+@media (min-width: 320px)
+  .navbar-nav
+    >li
+      >a
+        line-height: 20px
+
+  .col-xs-6
+     >a.btn.btn-default.btn-lg
+      padding: 10px 16px
+      font-size: 18px
+      width: 120px
+
+  #hero
+    >.slogan
+      max-width: 430px
+
+
+/* For tablet: */
+@media (min-width: 420px)
+  [class*="svg-"]
+    width: 50%
+    padding: 0 7%
+
+
+/* For desktop: */
+@media (min-width: 768px)
+  /* HERO */
+  nav .container, nav .container p.navbar-brand
+    font-size: 20px
+
+  #hero .slogan
+    max-width: 500px
+
+  h1
+    font-size: 42px
+
+
+  /* SKILLS */
+  #skills .container
+    max-width: 720px
+
+  [class*="svg-"]
+    width: 33%
+    padding: 0 3%
+
+
+@media (min-width: 992px)
+  /* ABOUT */
+  #aboutContent p
+    margin: 0
+    display: inline
+
+  #about
+    .about
+      margin: 30px auto
+      display: flex
+      .portrait
+        flex: 1
+      #aboutContent
+        flex: 3
+
+  .grill
+    margin: 0 auto
