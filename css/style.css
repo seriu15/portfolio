@@ -168,7 +168,20 @@ nav.navbar {
   #work h3 {
     margin-top: 0; }
   #work hr {
-    border-color: #dc3522; }
+    height: 30px;
+    border-style: solid;
+    border-color: #dc3522;
+    border-width: 1px 0 0 0;
+    border-radius: 20px; }
+    #work hr:before {
+      display: block;
+      content: "";
+      height: 30px;
+      margin-top: -30px;
+      border-style: solid;
+      border-color: #dc3522;
+      border-width: 0 0 1px 0;
+      border-radius: 20px; }
   #work .used {
     margin-top: 15px; }
 
@@ -193,6 +206,8 @@ a.btn.btn-default.btn-lg:hover {
     margin-bottom: 35px; }
   #contact .contact .btn {
     margin: 20px 0; }
+  #contact .contact-cv svg:hover #svg-cv {
+    fill: #dc3522; }
   #contact p > a, #contact p > a:hover {
     color: #dc3522; }
   #contact .contact-icons a:hover .fa-linkedin {
@@ -232,15 +247,16 @@ footer {
   nav .container, nav .container p.navbar-brand {
     font-size: 20px; }
   #hero .slogan {
-    max-width: 500px; }
+    max-width: 650px; }
   h1 {
-    font-size: 42px; }
+    font-size: 55px;
+    line-height: 48px; }
   /* SKILLS */
   #skills .container {
     max-width: 720px; }
   [class*="svg-"] {
     width: 33%;
-    padding: 0 3%; } }
+    padding: 1% 5%; } }
 
 @media (min-width: 992px) {
   /* ABOUT */

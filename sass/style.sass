@@ -190,8 +190,23 @@ nav.navbar
       margin-top: 20px
   h3
     margin-top: 0
+
   hr
+    height: 30px
+    border-style: solid
     border-color: $red
+    border-width: 1px 0 0 0
+    border-radius: 20px
+    &:before
+      display: block
+      content: ""
+      height: 30px
+      margin-top: -30px
+      border-style: solid
+      border-color: $red
+      border-width: 0 0 1px 0
+      border-radius: 20px
+
   .used
     margin-top: 15px
 
@@ -206,7 +221,7 @@ nav.navbar
     padding: 6px 6px
     font-size: 14px
     width: 80px
-    
+
 a.btn.btn-default.btn-lg:hover
   background-color: $red
   color: $gold
@@ -221,9 +236,13 @@ a.btn.btn-default.btn-lg:hover
     margin-bottom: 35px
   .contact .btn
     margin: 20px 0
+  .contact-cv
+    svg:hover
+        #svg-cv
+          fill: $red
   p
     >a, >a:hover
-      color: rgb(220, 53, 34)
+      color: $red
   .contact-icons
     a:hover
       .fa-linkedin
@@ -275,10 +294,11 @@ footer
     font-size: 20px
 
   #hero .slogan
-    max-width: 500px
+    max-width: 650px
 
   h1
-    font-size: 42px
+    font-size: 55px
+    line-height: 48px
 
 
   /* SKILLS */
@@ -287,7 +307,7 @@ footer
 
   [class*="svg-"]
     width: 33%
-    padding: 0 3%
+    padding: 1% 5%
 
 
 @media (min-width: 992px)
